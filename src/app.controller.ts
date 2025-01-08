@@ -6,7 +6,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getFunc(): string {
+  getFunc(): void {
     return this.appService.newFunc();
   }
 }
