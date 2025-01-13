@@ -1,0 +1,11 @@
+POST http://localhost:4000/songs
+
+
+# get api
+GET http://localhost:4000/songs
+
+GET http://localhost:4000/songs/1
+
+PUT  http://localhost:4000/songs/1
+
+DELETE  http://localhost:4000/songs/1
