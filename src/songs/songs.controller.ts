@@ -1,14 +1,16 @@
 import { Controller, Delete, Get, Post, Put } from '@nestjs/common';
+import { SongsService } from './songs.service';
 
 @Controller('songs')
 export class SongsController {
+  constructor(private readonly songService: SongsService) {}
   @Post()
   create() {
-    return 'New Song created';
+    return this.songService.create('Fraz');
   }
   @Get()
   findAll() {
-    return 'All Songs';
+    return this.songService.findAll();
   }
   @Get(':id')
   findOne() {
